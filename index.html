@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bai 6 - js</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input mt-5 w-50 mx-auto">
+        <div class="title p-4 bg-success text-light text-center rounded-top">
+          <h3>MẢNG - ARRAY</h3>
+        </div>
+        <div class="content bg-dark p-5 text-light rounded-bottom ">
+          <div class="form-group">
+            <label for="number">Nhập vào số nguyên</label>
+            <input
+              type="text"
+              name="number"
+              id="number"
+              class="form-control p-4"
+            />
+          </div>
+
+          <div class="button-wrapper">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="nhapVaoMang()"
+            >
+              Thêm vào mảng
+            </button>
+            <button
+              type="button"
+              class="ml-5 btn btn-primary"
+              onclick="xoaMang()"
+            >
+              Reset
+            </button>
+          </div>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_mang"></div>
+          </div>
+          <!-- Tính tổng số dương trong mảng -->
+          <hr class="bg-white" />
+          <h4>Tính tổng số dương</h4>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="tinhTongSoDuong()"
+          >
+            Tính tổng số dương
+          </button>
+
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_tong_so_duong"></div>
+          </div>
+
+          <!-- Đếm số lượng số dương trong mảng -->
+          <hr class="bg-white" />
+          <h4>Tìm số lượng số dương trong mảng</h4>
+          <button type="button" class="btn btn-primary" onclick="demSoDuong()">
+            Đếm số dương trong mảng
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_so_duong"></div>
+          </div>
+
+          <!-- Tìm số nhỏ nhất trong mảng -->
+          <hr class="bg-white" />
+          <h4>Tìm số nhỏ nhất trong mảng</h4>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="timSoNhoNhat()"
+          >
+            Tìm số nhỏ nhất
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_so_nho_nhat"></div>
+          </div>
+
+          <!-- Tìm số chẵn cuối cùng trong mảng -->
+          <hr class="bg-white" />
+          <h4>Tìm số chẵn cuối cùng</h4>
+          <button type="button" class="btn btn-primary" onclick="timSoChan()">
+            Tìm số chẵn cuối cùng trong mảng
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_so_chan_cuoi"></div>
+          </div>
+
+          <!-- Đổi chỗ 2 giá trị trong mảng theo vị trí -->
+          <hr class="bg-white" />
+          <h4>Hoán đổi vị trí</h4>
+          <div class="doi_vi_tri d-flex justify-content-between">
+            <div class="form-group">
+              <label for="vi_tri_1">Vị trí 1</label>
+              <input
+                type="text"
+                name="vi_tri_1"
+                id="vi_tri_1"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="vi_tri_2">Vị trí 2</label>
+              <input
+                type="text"
+                name="vi_tri_2"
+                id="vi_tri_2"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="doiViTri()">
+            Đổi vị trí
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_mang_hoan_doi"></div>
+          </div>
+
+          <hr class="bg-white" />
+          <h4>Sắp xếp mảng tăng dần</h4>
+          <button type="button" class="btn btn-primary" onclick="sapXepMang()">
+            Sắp xếp mảng
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_mang_tang_dan"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./array.js"></script>
+  </body>
+</html>
