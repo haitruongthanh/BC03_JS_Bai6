@@ -23,7 +23,7 @@
         <div class="title p-4 bg-success text-light text-center rounded-top">
           <h3>MẢNG - ARRAY</h3>
         </div>
-        <div class="content bg-dark p-5 text-light rounded-bottom ">
+        <div class="content bg-dark p-5 text-light rounded-bottom">
           <div class="form-group">
             <label for="number">Nhập vào số nguyên</label>
             <input
@@ -92,6 +92,19 @@
             <div class="card-body lead p-4" id="in_so_nho_nhat"></div>
           </div>
 
+          <!-- Tìm số dương nhỏ nhất trong mảng -->
+          <h4>Tìm số dương nhỏ nhất trong mảng</h4>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="timSoDuongNhoNhat()"
+          >
+            Tìm số dương nhỏ nhất
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_so_duong_nho_nhat"></div>
+          </div>
+
           <!-- Tìm số chẵn cuối cùng trong mảng -->
           <hr class="bg-white" />
           <h4>Tìm số chẵn cuối cùng</h4>
@@ -131,7 +144,7 @@
           <div class="card bg-light my-4 text-dark">
             <div class="card-body lead p-4" id="in_mang_hoan_doi"></div>
           </div>
-
+          <!-- Sắp xếp mảng tăng dần -->
           <hr class="bg-white" />
           <h4>Sắp xếp mảng tăng dần</h4>
           <button type="button" class="btn btn-primary" onclick="sapXepMang()">
@@ -139,6 +152,60 @@
           </button>
           <div class="card bg-light my-4 text-dark">
             <div class="card-body lead p-4" id="in_mang_tang_dan"></div>
+          </div>
+          <!-- Tìm số nguyên tố -->
+          <hr class="bg-white" />
+          <h4>Tìm số nguyên tố đầu tiên</h4>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="timSoNguyenTo()"
+          >
+            Tìm số nguyên tố
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_so_nguyen_to"></div>
+          </div>
+
+          <!-- Tìm số nguyên -->
+          <hr class="bg-white" />
+          <h4>Đếm số nguyên</h4>
+
+          <div class="form-group">
+            <label for="so_thuc">Nhập vào số thực</label>
+            <input
+              type="text"
+              name="so_thuc"
+              id="so_thuc"
+              class="form-control p-4"
+            />
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="nhapSoThuc()">
+            Nhập số thực
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_mang_so_thuc"></div>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="demSoNguyen()">
+            Tìm số lượng số nguyên
+          </button>
+
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_so_nguyen"></div>
+          </div>
+          <!-- So sánh số lượng số dương và âm -->
+          <hr class="bg-white" />
+          <h4>So sánh âm dương</h4>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="soSanhAmDuong()"
+          >
+            So sánh số âm và dương
+          </button>
+          <div class="card bg-light my-4 text-dark">
+            <div class="card-body lead p-4" id="in_so_am_duong"></div>
           </div>
         </div>
       </div>
