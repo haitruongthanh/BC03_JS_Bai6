@@ -19,198 +19,398 @@
   </head>
   <body>
     <div class="container">
-      <div class="input mt-5 w-50 mx-auto">
-        <div class="title p-4 bg-success text-light text-center rounded-top">
-          <h3>MẢNG - ARRAY</h3>
+      <div class="title">
+        <h3>MẢNG - ARRAY</h3>
+      </div>
+      <div class="top_input">
+        <div class="form-group">
+          <label for="number">Nhập vào số nguyên</label>
+          <input
+            type="text"
+            name="number"
+            id="number"
+            class="form-control p-4"
+          />
         </div>
-        <div class="content bg-dark p-5 text-light rounded-bottom">
-          <div class="form-group">
-            <label for="number">Nhập vào số nguyên</label>
-            <input
-              type="text"
-              name="number"
-              id="number"
-              class="form-control p-4"
-            />
-          </div>
 
-          <div class="button-wrapper">
-            <button
-              type="button"
-              class="btn btn-primary"
-              onclick="nhapVaoMang()"
+        <div class="button-wrapper">
+          <button type="button" class="btn btn-primary" onclick="nhapVaoMang()">
+            Thêm vào mảng
+          </button>
+          <button
+            type="button"
+            class="ml-5 btn btn-primary"
+            onclick="xoaMang()"
+          >
+            Reset
+          </button>
+        </div>
+        <div class="card bg-light my-4 text-dark">
+          <div class="card-body lead p-4" id="in_mang"></div>
+        </div>
+      </div>
+      <div class="bottom_answer">
+        <div class="row">
+          <div class="col-3">
+            <div
+              class="nav flex-column nav-pills"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
             >
-              Thêm vào mảng
-            </button>
-            <button
-              type="button"
-              class="ml-5 btn btn-primary"
-              onclick="xoaMang()"
-            >
-              Reset
-            </button>
-          </div>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_mang"></div>
-          </div>
-          <!-- Tính tổng số dương trong mảng -->
-          <hr class="bg-white" />
-          <h4>Tính tổng số dương</h4>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onclick="tinhTongSoDuong()"
-          >
-            Tính tổng số dương
-          </button>
-
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_tong_so_duong"></div>
-          </div>
-
-          <!-- Đếm số lượng số dương trong mảng -->
-          <hr class="bg-white" />
-          <h4>Tìm số lượng số dương trong mảng</h4>
-          <button type="button" class="btn btn-primary" onclick="demSoDuong()">
-            Đếm số dương trong mảng
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_so_duong"></div>
-          </div>
-
-          <!-- Tìm số nhỏ nhất trong mảng -->
-          <hr class="bg-white" />
-          <h4>Tìm số nhỏ nhất trong mảng</h4>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onclick="timSoNhoNhat()"
-          >
-            Tìm số nhỏ nhất
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_so_nho_nhat"></div>
-          </div>
-
-          <!-- Tìm số dương nhỏ nhất trong mảng -->
-          <h4>Tìm số dương nhỏ nhất trong mảng</h4>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onclick="timSoDuongNhoNhat()"
-          >
-            Tìm số dương nhỏ nhất
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_so_duong_nho_nhat"></div>
-          </div>
-
-          <!-- Tìm số chẵn cuối cùng trong mảng -->
-          <hr class="bg-white" />
-          <h4>Tìm số chẵn cuối cùng</h4>
-          <button type="button" class="btn btn-primary" onclick="timSoChan()">
-            Tìm số chẵn cuối cùng trong mảng
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_so_chan_cuoi"></div>
-          </div>
-
-          <!-- Đổi chỗ 2 giá trị trong mảng theo vị trí -->
-          <hr class="bg-white" />
-          <h4>Hoán đổi vị trí</h4>
-          <div class="doi_vi_tri d-flex justify-content-between">
-            <div class="form-group">
-              <label for="vi_tri_1">Vị trí 1</label>
-              <input
-                type="text"
-                name="vi_tri_1"
-                id="vi_tri_1"
-                class="form-control"
-              />
+              <a
+                class="nav-link active"
+                id="v-pills-home-tab"
+                data-toggle="pill"
+                href="#v-pills-home"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+                >Bài 1</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-profile-tab"
+                data-toggle="pill"
+                href="#v-pills-profile"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+                >Bài 2</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-messages-tab"
+                data-toggle="pill"
+                href="#v-pills-messages"
+                role="tab"
+                aria-controls="v-pills-messages"
+                aria-selected="false"
+                >Bài 3</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                href="#v-pills-settings"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+                >Bài 4</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-bai5-tab"
+                data-toggle="pill"
+                href="#v-pills-bai5"
+                role="tab"
+                aria-controls="v-pills-bai5"
+                aria-selected="false"
+                >Bài 5</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-bai6-tab"
+                data-toggle="pill"
+                href="#v-pills-bai6"
+                role="tab"
+                aria-controls="v-pills-bai6"
+                aria-selected="false"
+                >Bài 6</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-bai7-tab"
+                data-toggle="pill"
+                href="#v-pills-bai7"
+                role="tab"
+                aria-controls="v-pills-bai7"
+                aria-selected="false"
+                >Bài 7</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-bai8-tab"
+                data-toggle="pill"
+                href="#v-pills-bai8"
+                role="tab"
+                aria-controls="v-pills-bai8"
+                aria-selected="false"
+                >Bài 8</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-bai9-tab"
+                data-toggle="pill"
+                href="#v-pills-bai9"
+                role="tab"
+                aria-controls="v-pills-bai9"
+                aria-selected="false"
+                >Bài 9</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-bai10-tab"
+                data-toggle="pill"
+                href="#v-pills-bai10"
+                role="tab"
+                aria-controls="v-pills-bai10"
+                aria-selected="false"
+                >Bài 10</a
+              >
             </div>
-            <div class="form-group">
-              <label for="vi_tri_2">Vị trí 2</label>
-              <input
-                type="text"
-                name="vi_tri_2"
-                id="vi_tri_2"
-                class="form-control"
-              />
+          </div>
+          <div class="col-9">
+            <div class="tab-content" id="v-pills-tabContent">
+              <!-- bài 1 -->
+              <div
+                class="tab-pane fade show active"
+                id="v-pills-home"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+              >
+                <h4>Tính tổng số dương</h4>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="tinhTongSoDuong()"
+                >
+                  Tính tổng số dương
+                </button>
+
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_tong_so_duong"></div>
+                </div>
+              </div>
+
+              <!-- bài 2 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-profile"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <h4>Tìm số lượng số dương trong mảng</h4>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="demSoDuong()"
+                >
+                  Đếm số dương trong mảng
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_so_duong"></div>
+                </div>
+              </div>
+
+              <!-- bài 3 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-messages"
+                role="tabpanel"
+                aria-labelledby="v-pills-messages-tab"
+              >
+                <h4>Tìm số nhỏ nhất trong mảng</h4>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="timSoNhoNhat()"
+                >
+                  Tìm số nhỏ nhất
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_so_nho_nhat"></div>
+                </div>
+              </div>
+
+              <!-- bài 4 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-settings"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="timSoDuongNhoNhat()"
+                >
+                  Tìm số dương nhỏ nhất
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div
+                    class="card-body lead p-4"
+                    id="in_so_duong_nho_nhat"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- bài 5 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-bai5"
+                role="tabpanel"
+                aria-labelledby="v-pills-bai5-tab"
+              >
+                <h4>Tìm số chẵn cuối cùng</h4>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="timSoChan()"
+                >
+                  Tìm số chẵn cuối cùng trong mảng
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_so_chan_cuoi"></div>
+                </div>
+              </div>
+
+              <!-- bài 6 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-bai6"
+                role="tabpanel"
+                aria-labelledby="v-pills-bai6-tab"
+              >
+                <h4>Hoán đổi vị trí</h4>
+                <div class="doi_vi_tri d-flex justify-content-between">
+                  <div class="form-group">
+                    <label for="vi_tri_1">Vị trí 1</label>
+                    <input
+                      type="text"
+                      name="vi_tri_1"
+                      id="vi_tri_1"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="vi_tri_2">Vị trí 2</label>
+                    <input
+                      type="text"
+                      name="vi_tri_2"
+                      id="vi_tri_2"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="doiViTri()"
+                >
+                  Đổi vị trí
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_mang_hoan_doi"></div>
+                </div>
+              </div>
+
+              <!-- bài 7 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-bai7"
+                role="tabpanel"
+                aria-labelledby="v-pills-bai7-tab"
+              >
+                <h4>Sắp xếp mảng tăng dần</h4>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="sapXepMang()"
+                >
+                  Sắp xếp mảng
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_mang_tang_dan"></div>
+                </div>
+              </div>
+
+              <!-- bài 8 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-bai8"
+                role="tabpanel"
+                aria-labelledby="v-pills-bai8-tab"
+              >
+                <h4>Tìm số nguyên tố đầu tiên</h4>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="timSoNguyenTo()"
+                >
+                  Tìm số nguyên tố
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_so_nguyen_to"></div>
+                </div>
+              </div>
+
+              <!-- bài 9 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-bai9"
+                role="tabpanel"
+                aria-labelledby="v-pills-bai9-tab"
+              >
+                <h4>Đếm số nguyên</h4>
+
+                <div class="form-group">
+                  <label for="so_thuc">Nhập vào số thực</label>
+                  <input
+                    type="text"
+                    name="so_thuc"
+                    id="so_thuc"
+                    class="form-control p-4"
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="nhapSoThuc()"
+                >
+                  Nhập số thực
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_mang_so_thuc"></div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="demSoNguyen()"
+                >
+                  Tìm số lượng số nguyên
+                </button>
+
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_so_nguyen"></div>
+                </div>
+              </div>
+
+              <!-- bài 10 -->
+              <div
+                class="tab-pane fade"
+                id="v-pills-bai10"
+                role="tabpanel"
+                aria-labelledby="v-pills-bai10-tab"
+              >
+                <h4>So sánh âm dương</h4>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="soSanhAmDuong()"
+                >
+                  So sánh số âm và dương
+                </button>
+                <div class="card bg-light my-4 text-dark">
+                  <div class="card-body lead p-4" id="in_so_am_duong"></div>
+                </div>
+              </div>
             </div>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="doiViTri()">
-            Đổi vị trí
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_mang_hoan_doi"></div>
-          </div>
-          <!-- Sắp xếp mảng tăng dần -->
-          <hr class="bg-white" />
-          <h4>Sắp xếp mảng tăng dần</h4>
-          <button type="button" class="btn btn-primary" onclick="sapXepMang()">
-            Sắp xếp mảng
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_mang_tang_dan"></div>
-          </div>
-          <!-- Tìm số nguyên tố -->
-          <hr class="bg-white" />
-          <h4>Tìm số nguyên tố đầu tiên</h4>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onclick="timSoNguyenTo()"
-          >
-            Tìm số nguyên tố
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_so_nguyen_to"></div>
-          </div>
-
-          <!-- Tìm số nguyên -->
-          <hr class="bg-white" />
-          <h4>Đếm số nguyên</h4>
-
-          <div class="form-group">
-            <label for="so_thuc">Nhập vào số thực</label>
-            <input
-              type="text"
-              name="so_thuc"
-              id="so_thuc"
-              class="form-control p-4"
-            />
-          </div>
-
-          <button type="button" class="btn btn-primary" onclick="nhapSoThuc()">
-            Nhập số thực
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_mang_so_thuc"></div>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="demSoNguyen()">
-            Tìm số lượng số nguyên
-          </button>
-
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_so_nguyen"></div>
-          </div>
-          <!-- So sánh số lượng số dương và âm -->
-          <hr class="bg-white" />
-          <h4>So sánh âm dương</h4>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onclick="soSanhAmDuong()"
-          >
-            So sánh số âm và dương
-          </button>
-          <div class="card bg-light my-4 text-dark">
-            <div class="card-body lead p-4" id="in_so_am_duong"></div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

@@ -1,9 +1,9 @@
 // var numberArray = [1, -3, 11, 6, 8, -1, -4, 5, 2, 3, 7, 9, 13]; //array test
-var numberArray = [
-  -3, -11, 6, -1, -4, 1, 5, 2, 3, 7, 9, 13, -3.3, 5.5, 1.5, -1.7, 1.8, -1.9, -1,
-  8,
-]; //array test
-// var numberArray = [];
+// var numberArray = [
+//   -3, -11, 6, -1, -4, 1, 5, 2, 3, 7, 9, 13, -3.3, 5.5, 1.5, -1.7, 1.8, -1.9, -1,
+//   8,
+// ]; //array test
+var numberArray = [];
 
 var nhapVaoMang = function () {
   var number = document.getElementById("number").value * 1;
